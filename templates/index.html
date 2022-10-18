@@ -19,7 +19,7 @@
                 <h1 class="mb-5">Flask Image Upload and Show</h1>
 
                 <form class action="index.html" method="post" enctype="multipart/form-data">
-                    {{ form.hidden_tag }}
+                    {{ form.hidden_tag() }}
 
                     {% for error in form.photo.errors %}
                         <span style="color: red;">{{ error }}</span>
@@ -30,7 +30,7 @@
                             {{ form.photo(class="form-control") }}
                         </div>
                         <div class="col-auto">
-                            {{ form.submit(class="btn btn-success" }}
+                            {{ form.submit(class="btn btn-success") }}
                         </div>
                     </div>
 
@@ -38,7 +38,7 @@
 
                 {% if file_url %}
                     <div class="mt-5">
-                        <img src="{{ file_url }}" style="wdith: 400px;">
+                        <img src="{{ file_url }}" style="width: 400px;">
                     </div>
                 {% endif %}
 

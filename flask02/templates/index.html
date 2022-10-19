@@ -8,6 +8,9 @@
           rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
           crossorigin="anonymous">
     <link rel="stylesheet" href="/static/styles.css">
+
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+
     <title>Title </title>
 </head>
 <body>
@@ -16,7 +19,9 @@
     <div class="container">
         <div class="row">
             <div class="col-8 mx-auto mt-5 text-center">
-                <button class="btn btn-success">Go!</button>
+                <button class="btn btn-success" id="button">Go!</button>
+                <button class="btn btn-danger" id="red-button">Get number!</button>
+
             </div>
         </div>
 
@@ -27,15 +32,16 @@
                 <ul id="left"></ul>
             </div>
 
-            <div class="col-4" id="right">
+            <div class="col-4">
                 POST
-                <ul id="left"></ul>
+                <ul id="right"></ul>
             </div>
 
         </div>
 
     </div>
 
+    <py-script src="./static/script.py"></py-script>
 
 </body>
 </html>

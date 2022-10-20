@@ -28,7 +28,7 @@ async def get_number_onclick(e):
 
     li = document.createElement('li')
     li.innerHTML = data['number']
-    li.addEventListener('click', pyodide.create_proxy(send_number_onclick))
+    li.addEventListener('click', pyodide.ffi.create_proxy(send_number_onclick))
 
     ul.appendChild(li)
 
